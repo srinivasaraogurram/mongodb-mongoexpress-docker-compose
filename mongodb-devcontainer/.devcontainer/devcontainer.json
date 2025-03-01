@@ -1,0 +1,13 @@
+{
+  "name": "MongoDB Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "mongodb",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "extensions": [
+    "mongodb.mongodb-vscode",
+    "ms-vscode.vscode-node-azure-pack"
+  ],
+  "postCreateCommand": "docker-compose up -d",
+  "forwardPorts": [27017, 8081]
+}
