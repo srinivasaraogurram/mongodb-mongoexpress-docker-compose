@@ -5,10 +5,7 @@ services:
     image: mongo:latest
     container_name: mongodb
     restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: password
-    command: ["mongod", "--bind_ip", "0.0.0.0"]
+    command: ["mongod", "--bind_ip", "0.0.0.0"]  # Removed authentication
     volumes:
       - mongodb_data:/data/db
     ports:
@@ -19,9 +16,8 @@ services:
     container_name: mongo-express
     restart: always
     environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
-      ME_CONFIG_MONGODB_ADMINPASSWORD: password
-      ME_CONFIG_MONGODB_URL: mongodb://admin:password@mongodb:27017/
+      ME_CONFIG_MONGODB_URL: mongodb://mongodb:27017/  # Direct connection, no auth
+      ME_CONFIG_BASICAUTH: "false"  # Disables authentication
     ports:
       - "8081:8081"
     depends_on:
