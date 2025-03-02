@@ -5,9 +5,11 @@
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
   "extensions": [
-    "mongodb.mongodb-vscode",
-    "ms-vscode.vscode-node-azure-pack"
+    "mongodb.mongodb-vscode"
   ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
   "postCreateCommand": "docker-compose up -d",
   "forwardPorts": [27017, 8081]
 }
