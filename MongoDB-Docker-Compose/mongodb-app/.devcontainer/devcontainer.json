@@ -3,8 +3,11 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "mongodb",
   "workspaceFolder": "/workspace",
+  "portsAttributes": {
+    "27017": { "label": "MongoDB", "onAutoForward": "openBrowser" },
+    "8081": { "label": "Mongo Express", "onAutoForward": "openBrowser" }
+  },
   "extensions": [
-    "ms-vscode.vscode-typescript-next",
     "mongodb.mongodb-vscode"
   ],
   "settings": {

@@ -8,6 +8,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: password
+    command: ["mongod", "--bind_ip", "0.0.0.0"]
     volumes:
       - mongodb_data:/data/db
     ports:
