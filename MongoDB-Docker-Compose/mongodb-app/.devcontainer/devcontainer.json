@@ -1,0 +1,13 @@
+{
+  "name": "MongoDB Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "mongodb",
+  "workspaceFolder": "/workspace",
+  "extensions": [
+    "ms-vscode.vscode-typescript-next",
+    "mongodb.mongodb-vscode"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  }
+}
