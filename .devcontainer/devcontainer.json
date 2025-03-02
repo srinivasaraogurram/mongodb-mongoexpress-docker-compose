@@ -3,13 +3,11 @@
   "dockerComposeFile": "docker-compose.yml",
   "service": "mongodb",
   "workspaceFolder": "/workspace",
-  "shutdownAction": "stopCompose",
   "extensions": [
     "mongodb.mongodb-vscode"
   ],
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
-  "postCreateCommand": "docker-compose up -d",
-  "forwardPorts": [27017, 8081]
+  "postCreateCommand": "bash /workspace/scripts/startup.sh"
 }
